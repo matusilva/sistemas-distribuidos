@@ -1,0 +1,5 @@
+module appApp{
+	interface app{
+		attribute string msg;
+	};
+};

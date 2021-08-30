@@ -1,0 +1,21 @@
+package OlaApp;
+import OlaApp.OlaPOA;
+
+public class OlaServo extends OlaPOA {
+	
+	private String msg = "\n Olá App\n";
+	
+	@Override
+	public String msg() {
+		// TODO Auto-generated method stub
+		return msg;
+	}
+
+	@Override
+	public void msg(String newMsg) {
+		// TODO Auto-generated method stub
+		msg = newMsg;
+		
+	}
+
+}

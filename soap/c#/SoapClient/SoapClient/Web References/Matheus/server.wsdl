@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://matheus.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://matheus.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://matheus.com">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="somaRequest">
+    <wsdl:part name="a" type="xsd:int" />
+    <wsdl:part name="b" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="somaResponse">
+    <wsdl:part name="return" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:portType name="Matheus SOAPPortType">
+    <wsdl:operation name="soma">
+      <documentation>Atividade de distribuido</documentation>
+      <wsdl:input message="tns:somaRequest" />
+      <wsdl:output message="tns:somaResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Matheus SOAPBinding" type="tns:Matheus SOAPPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="soma">
+      <soap:operation soapAction="http://localhost/server.php/soma" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://matheus.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://matheus.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Matheus SOAP">
+    <wsdl:port name="Matheus SOAPPort" binding="tns:Matheus SOAPBinding">
+      <soap:address location="http://localhost/server.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

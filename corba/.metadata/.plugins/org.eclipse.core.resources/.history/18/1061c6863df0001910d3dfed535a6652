@@ -1,0 +1,21 @@
+package OlaApp;
+
+import org.omg.CORBA.ORB;
+import org.omg.PortableServer.POA;
+import org.omg.PortableServer.POAHelper;
+
+public class OlaServer {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			ORB orb = ORB.init(args, null);
+			POA rootpoa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
+			rootpoa.the_POAManager().activate();
+			OlaServo olaobjeto = new OlaServo();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+}

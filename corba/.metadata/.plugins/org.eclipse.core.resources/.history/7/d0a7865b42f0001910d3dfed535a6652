@@ -1,0 +1,20 @@
+package OlaApp;
+
+import org.omg.CORBA.ORB;
+import org.omg.CosNaming.NamingContextExtHelper;
+
+public class OlaClient {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			ORB orb = ORB.init(args, null);
+			
+			org.omg.CORBA.Object objRef = orb.resolve_initial_references("NameService");
+			org.omg.CosNaming.NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+}

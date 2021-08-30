@@ -1,0 +1,5 @@
+module OlaApp{
+	interface Ola{
+		attribute string msg;
+	};
+};

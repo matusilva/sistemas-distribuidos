@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="OlaApp.OlaPOA"/>
+<fullyQualifiedTypeName name="org.omg.PortableServer.POAHelper"/>
+<fullyQualifiedTypeName name="org.omg.PortableServer.POA"/>
+<fullyQualifiedTypeName name="OlaApp.OlaServo"/>
+<fullyQualifiedTypeName name="org.omg.CosNaming.NamingContextExt"/>
+<fullyQualifiedTypeName name="org.omg.CosNaming.NameComponent"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.ORB"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.Object"/>
+<fullyQualifiedTypeName name="org.omg.CosNaming.NamingContextExtHelper"/>
+<fullyQualifiedTypeName name="OlaApp.Ola"/>
+<fullyQualifiedTypeName name="OlaApp.OlaHelper"/>
+</qualifiedTypeNameHistroy>
